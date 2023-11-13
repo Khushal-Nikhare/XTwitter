@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>X</title>
+
+    <style>
+        @font-face {
+            font-family: Chirp Web Heavy;
+            src: url(/rsc/Font/Chirp\ Web\ Heavy.ttf);
+
+
+        }
+
+        @font-face {
+            font-family: Chirp Web Heavy;
+            src: url(/rsc/Font/Chirp\ Web\ Medium.ttf);
+            font-weight: light;
+
+        }
+
+        body {
+            margin: 0;
+            font-family: Chirp Web Heavy;
+            height: 720px;
+
+        }
+
+        .main {
+            display: flex;
+            /* border: 1px solid black; */
+            height: 720px;
+
+        }
+
+
+        header.menu {
+            display: flex;
+            /* border: 2px solid rgb(255, 0, 0); */
+            max-height: 720px;
+            width: 30%;
+            justify-content: flex-end;
+        }
+
+        .menu div div {
+            list-style-type: none;
+            font-size: 20px;
+
+        }
+
+        .menu div div a {
+            font-size: 13px;
+            text-decoration: none;
+            color: black;
+            font-family: Chirp Web Heavy;
+        }
+
+        .menu div {
+            padding: 0px 40px 0px 3px;
+            /* justify-content: flex-start; */
+
+        }
+
+        /* .menu div {
+            border: 2px solid gold;
+
+        } */
+
+        .menu img {
+            height: 25px;
+        }
+
+        .menu div div {
+            padding: 10px;
+            /* margin-top: 10px; */
+            /* width: 100px; */
+            /* margin-bottom: 1px; */
+
+        }
+
+        .menu div div :hover {
+            background-color: rgb(91, 91, 91);
+        }
+
+        .user {
+            /* border: 2px solid rgb(50, 190, 205); */
+            width: 70%;
+            display: flex;
+            /* gap: 20px; */
+        }
+
+        .content {
+            display: flex;
+            /* border: 2px solid rgb(9, 255, 0); */
+            width: 47%;
+        }
+
+        .connav {
+            display: flex;
+            width: 100%;
+            height: 30px;
+            padding: 10px 0px 0px 0px;
+            /* border: 2px solid rgb(255, 0, 187) */
+        }
+
+
+
+        .connav div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 2px solid greenyellow; */
+            height: 99%;
+            width: 99%;
+        }
+
+        .connav div a {
+            text-decoration: none;
+            color: black;
+            width: 85%;
+            height: 95%;
+        }
+
+        .info {
+            display: flex;
+            /* border: 1px solid rgb(0, 94, 255); */
+            width: 35%;
+        }
+
+        .info div {
+            display: flex;
+            width: 100%;
+            height: 30px;
+            border: none;
+            border-radius: 30px;
+            background-color: rgb(154, 154, 154);
+            /* height:max-content; */
+
+        }
+
+        div.Searchbox {
+            display: flex;
+            height: 100%;
+
+        }
+
+        .Searchbox input {
+            /* margin: 10px; */
+            padding: 12px;
+            border: none;
+            background-color: transparent;
+            border-radius: 20px;
+            height: 100%;
+            width: 100%;
+
+            /* font-size: 18px; */
+        }
+
+        .Searchbox input[type=search]:focus {
+            outline: none;
+        }
+
+        .Searchbox input[type=search]::placeholder {
+            color: black;
+        }
+
+        div.icon {
+            display: flex;
+            height: 100%;
+            width: 25px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon img {
+            height: 15px;
+            padding: 0px 0px 0px 11px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <header class="menu">
+            <div>
+
+                <div><a href=""><img src="/rsc/image/X-Logo.png" alt="X"></a></div>
+                <div><a href="http://" rel="noopener noreferrer">Home</a></div>
+                <div><a href="http://" rel="noopener noreferrer">Explore</a></div>
+                <div><a href="http://" rel="noopener noreferrer">Notifications</a></div>
+                <div><a href="http://" rel="noopener noreferrer">Messages</a></div>
+                <div><a href="http://" rel="noopener noreferrer">Lists</a></div>
+                <div><a href="http://" rel="noopener noreferrer">Bookmarks</a></div>
+                <div><a href="http://" rel="noopener noreferrer">Communities</a></div>
+                <div><a href="http://" rel="noopener noreferrer">Premium</a></div>
+                <div><a href="http://" rel="noopener noreferrer">Profile</a></div>
+                <div><a href="http://" rel="noopener noreferrer">More</a></div>
+
+            </div>
+        </header>
+        <div class="user">
+            <div class="content">
+                <div class="connav">
+                    <div>
+                        <a href="#">
+                            <div>For you</div>
+                        </a>
+                    </div>
+                    <!-- <button>For you</button> -->
+                    <div>
+
+                        <a href="#">
+                            <div> Follow</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <div>
+                    <div class="icon"><img src="/rsc/icon/magnifying-glass-solid.svg" alt="?"></div>
+                    <div class="Searchbox"><input type="search" name="Search" id="Search" placeholder="Search"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
