@@ -41,8 +41,8 @@
             display: flex;
             /* border: 2px solid rgb(255, 0, 0); */
             max-height: 720px;
-            width: 30%;
-            justify-content: flex-end;
+            width: fit-content;
+            justify-content: flex-start;
         }
 
         .menu div div {
@@ -52,37 +52,122 @@
         }
 
         .menu div div a {
-            font-size: 13px;
+            /* font-size: 19px; */
             text-decoration: none;
             color: black;
             font-family: Chirp Web Heavy;
+            /* height: 30px; */
         }
 
         .menu div {
-            padding: 0px 40px 0px 3px;
+            /* padding: 0px 40px 0px 3px; */
             /* justify-content: flex-start; */
 
         }
 
         /* .menu div {
-            border: 2px solid gold;
+            width: 40%;
 
         } */
 
-        .menu img {
+        .conmain {
+            /* width: 30%; */
+            /* border: 2px solid gold; */
+            padding: 5px 0px 0px 0px;
+
+
+        }
+
+        div.logo {
+            display: flex;
+            /* justify-items: center; */
+            /* align-items: center; */
+            padding: 5px;
+            margin: 0px;
+            width: max-content;
+            /* border: 2px solid blue; */
+            /* border-radius: 30%; */
+        }
+
+        .logo a img {
             height: 25px;
         }
 
-        .menu div div {
+        /* .menu div {
             padding: 10px;
-            /* margin-top: 10px; */
-            /* width: 100px; */
-            /* margin-bottom: 1px; */
+            margin-top: 10px; */
+        /* width: 100px; */
+        /* margin-bottom: 1px;
+
+        } */
+
+        div.meop {
+            /* border: 2px solid black; */
+            border-radius: 20px;
+            margin: 10px;
+            /* padding: 8px; */
+            width: fit-content;
+            /* height: 30px; */
+
+            /* height: 20px; */
+        }
+
+        .meop a {
+            display: flex;
+            margin: 0px;
+            padding: 5px;
+            height: fit-content;
 
         }
 
-        .menu div div :hover {
-            background-color: rgb(91, 91, 91);
+        .meop p{
+            margin: 0px;
+            display: inline;
+            font-size: 17px;   
+        }
+        .textme {
+            display: flex;
+            flex-direction: row;
+        }
+        div.conicon {
+
+            display: inline;
+            ;
+            /* justify-content: flex-start;
+            align-items: center; */
+            /* position: relative; */
+            padding: 0px 5px 0px 0px;
+            border-radius: 20px;
+
+        }
+        /* .conicon svg path{
+            width: 100px;
+        } */
+
+        
+        .conicon:hover {
+            background: none;
+            /* border-radius: 20px; */
+
+        }
+
+
+        .meop a div {
+            /* border: 2px solid navy; */
+            /* padding: 9px; */
+            width: max-content;
+            font-size: 13px;
+            border-radius: 20px;
+        }
+
+
+        /* .conicon svg{
+            display: flex;
+            align-items: center;
+            padding: 0px;
+        } */
+        .meop:hover {
+            background-color: rgb(163, 163, 163);
         }
 
         .user {
@@ -94,7 +179,7 @@
 
         .content {
             display: flex;
-            /* border: 2px solid rgb(9, 255, 0); */
+            border: 2px solid rgb(9, 255, 0);
             width: 47%;
         }
 
@@ -103,7 +188,7 @@
             width: 100%;
             height: 30px;
             padding: 10px 0px 0px 0px;
-            /* border: 2px solid rgb(255, 0, 187) */
+            border: 2px solid rgb(255, 0, 187)
         }
 
 
@@ -112,7 +197,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* border: 2px solid greenyellow; */
+            border: 2px solid greenyellow;
             height: 99%;
             width: 99%;
         }
@@ -182,23 +267,106 @@
     </style>
 </head>
 
+
 <body>
 
     <div class="main">
         <header class="menu">
-            <div>
+            <div class="conmain">
 
-                <div><a href=""><img src="/rsc/image/X-Logo.png" alt="X"></a></div>
-                <div><a href="http://" rel="noopener noreferrer">Home</a></div>
-                <div><a href="http://" rel="noopener noreferrer">Explore</a></div>
-                <div><a href="http://" rel="noopener noreferrer">Notifications</a></div>
-                <div><a href="http://" rel="noopener noreferrer">Messages</a></div>
-                <div><a href="http://" rel="noopener noreferrer">Lists</a></div>
-                <div><a href="http://" rel="noopener noreferrer">Bookmarks</a></div>
-                <div><a href="http://" rel="noopener noreferrer">Communities</a></div>
-                <div><a href="http://" rel="noopener noreferrer">Premium</a></div>
-                <div><a href="http://" rel="noopener noreferrer">Profile</a></div>
-                <div><a href="http://" rel="noopener noreferrer">More</a></div>
+                <div class="logo meop"><a href="#"><img src="/rsc/image/X-Logo.png" alt="X"></a></div>
+                <div class="meop "><a href="http://" rel="noopener noreferrer">
+                        <div>
+                            <div class="conicon"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                    viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                                </svg></div><div class="textme"><p>Home</p></div>
+                        </div>
+                    </a></div>
+                <div class="meop"><a href="http://" rel="noopener noreferrer">
+                        <div>
+                            <div class="conicon"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                                </svg>
+                            </div>
+                            <p>Explore</p>
+                        </div>
+                    </a></div>
+                <div class="meop"><a href="http://" rel="noopener noreferrer">
+                        <div>
+                            <div class="conicon"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                    viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M224 0c-17.7 0-32 14.3-32 32V51.2C119 66 64 130.6 64 208v18.8c0 47-17.3 92.4-48.5 127.6l-7.4 8.3c-8.4 9.4-10.4 22.9-5.3 34.4S19.4 416 32 416H416c12.6 0 24-7.4 29.2-18.9s3.1-25-5.3-34.4l-7.4-8.3C401.3 319.2 384 273.9 384 226.8V208c0-77.4-55-142-128-156.8V32c0-17.7-14.3-32-32-32zm45.3 493.3c12-12 18.7-28.3 18.7-45.3H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7z" />
+                                </svg></div><p>Notifications</p>
+                        </div>
+                    </a></div>
+                <div class="meop"><a href="http://" rel="noopener noreferrer">
+                        <div>
+                            <div class="conicon"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                                </svg></div><p>Messages</p>
+                        </div>
+                    </a></div>
+                <div class="meop"><a href="http://" rel="noopener noreferrer">
+                        <div>
+                            <div class="conicon"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z" />
+                                </svg></div><p>Lists</p>
+                        </div>
+                    </a></div>
+                <div class="meop"><a href="http://" rel="noopener noreferrer">
+                        <div>
+                            <div class="conicon"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                    viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z" />
+                                </svg></div><p>Bookmarks</p>
+                        </div>
+                    </a></div>
+                <div class="meop"><a href="http://" rel="noopener noreferrer">
+                        <div>
+                            <div class="conicon"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M96 0C60.7 0 32 28.7 32 64V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H96zM208 288h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H144c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM512 80c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V80zM496 192c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm16 144c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V336z" />
+                                </svg></div><p>Communities</p>
+                        </div>
+                    </a></div>
+                <div class="meop"><a href="http://" rel="noopener noreferrer">
+                        <div>
+                            <div class="conicon"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                                </svg></div><p>Premium</p>
+                        </div>
+                    </a></div>
+                <div class="meop"><a href="http://" rel="noopener noreferrer">
+                        <div>
+                            <div class="conicon"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                    viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                                </svg></div><p>Profile</p>
+                        </div>
+                    </a></div>
+                <div class="meop"><a href="http://" rel="noopener noreferrer">
+                        <div>
+                            <div class="conicon"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                    viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z" />
+                                </svg></div><p>More</p>
+                        </div>
+                    </a></div>
 
             </div>
         </header>
@@ -211,6 +379,12 @@
                         </a>
                     </div>
                     <!-- <button>For you</button> -->
+                    <div>
+
+                        <a href="#">
+                            <div> Follow</div>
+                        </a>
+                    </div>
                     <div>
 
                         <a href="#">
