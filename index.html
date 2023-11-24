@@ -9,22 +9,35 @@
 
     <style>
         @font-face {
-            font-family: Chirp Web Heavy;
-            src: url(rsc/Font/Chirp\ Web\ Heavy.ttf);
+            font-family: "Chirp Web Heavy";
+            src: url("rsc/Font/Chirp_Web_Heavy.ttf") format("woff");
+            font-weight: normal;
+        }
 
+        @font-face {
+            font-family: "Chirp Web Medium";
+            src: url("rsc/Font/Chirp_Web_Medium.ttf") format("woff");
+            font-weight: normal;
 
         }
 
         @font-face {
-            font-family: Chirp Web Heavy;
-            src: url(rsc/Font/Chirp\ Web\ Medium.ttf);
-            font-weight: light;
+            font-family: "Chirp Web Bold";
+            src: url("rsc/Font/Chirp_Web_Bold.ttf") format("woff");
+            font-weight: normal;
+
+        }
+
+        @font-face {
+            font-family: "Chirp Web";
+            src: url("rsc/Font/Chirp_Web.ttf") format("woff");
+            font-weight: normal;
 
         }
 
         body {
             margin: 0;
-            font-family: Chirp Web Heavy;
+            font-family: "Chirp Web Heavy";
             height: 720px;
 
         }
@@ -55,7 +68,8 @@
             /* font-size: 19px; */
             text-decoration: none;
             color: black;
-            font-family: Chirp Web Heavy;
+            font-family: "Chirp Web";
+            /* font-family: Chirp Web Medium; */
             /* height: 30px; */
         }
 
@@ -180,6 +194,7 @@
         }
 
         .connav {
+            position: sticky;
             display: flex;
             width: 99%;
             height: 50px;
@@ -256,15 +271,15 @@
             width: 100%;
         }
 
-        .post {
+        .postTwitte {
             display: flex;
             /* border: 1px solid black; */
             padding: 0px 14px;
             width: 99%;
-            height: 65px;
+            height: fit-content;
         }
 
-        .post img {
+        .postTwitte img {
             height: 40px;
             display: flex;
             border-radius: 50%;
@@ -278,9 +293,11 @@
 
         .twittepost {
             width: 100%;
+
             display: flex;
             justify-content: center;
-            width: 100%;
+            flex-direction: column;
+
         }
 
         .twiinput {
@@ -308,6 +325,231 @@
         #twitte::placeholder {
             font-size: 17px;
 
+        }
+
+        .mediaOption {
+            /* border: 1px solid black; */
+            display: flex;
+            height: 50%;
+            padding: 0px;
+            margin: 4px 0px 0px 0px;
+
+        }
+
+        .addmedia {
+            display: flex;
+            margin: 0px;
+            padding: 0px;
+            /* border: 1px solid rgb(255, 0, 0); */
+
+        }
+
+        .mediaButton {
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: 30px;
+            margin: 0px 0px 0px 0px;
+            padding: 0px;
+            border: none;
+            background: none;
+            /* border: 1px solid black; */
+        }
+
+        .mediaButton:hover {
+            background-color: rgba(0, 243, 243, 0.279);
+        }
+
+        .mediaButton:active {
+            background-color: aqua;
+        }
+
+        .postbutton {
+            width: 100%;
+            height: 100%;
+            /* border: 1px solid blue; */
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+        }
+
+        .post {
+            border: none;
+            height: 25px;
+            width: 60px;
+            border-radius: 50px;
+            font-size: 15px;
+            background-color: #1a8cd8;
+        }
+
+        .post:hover {
+            background-color: #156eaa;
+        }
+
+        .post:active {
+            background-color: #015a96;
+        }
+
+        .postext {
+            font-size: 15px;
+            color: aliceblue;
+            font-family: Chirp Web Heavy;
+        }
+
+        .postcontent {
+            display: flex;
+            width: 100%;
+            height: max-content;
+        }
+
+        .twitteposted {
+            display: flex;
+            /* border: 1px solid yellowgreen; */
+            height: fit-content;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .twittePFP {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            width: 60px;
+        }
+
+        .twittePFP img {
+            width: 35px;
+            border-radius: 50%;
+        }
+
+        .twitteContent {
+            /* border: 1px solid hotpink; */
+            
+            width: 100%;
+        }
+
+        .userDetail {
+            /* border: 1px solid orange; */
+            display: flex;
+        }
+
+        .userinfo {
+            display: flex;
+            width: 100%;
+            /* border: 1px solid sienna; */
+        }
+
+        .username {
+            margin-right: 3px;
+            /* border: 1px solid rgb(0, 102, 83); */
+            display: flex;
+
+        }
+
+        .name {
+            /* border: 1px solid indigo; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 3px;
+        }
+
+        .name p {
+            padding: 0px;
+            margin: 0px;
+            font-size: 13px;
+            font-family: Chirp Web Bold;
+        }
+
+        .bluetick {
+
+            /* border: 1px solid rgb(80, 130, 0); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bluetick svg {
+            fill: #1d9af1
+        }
+
+        .usertag {
+            margin-right: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .usertag p {
+            font-family: Chirp Web Medium;
+            font-size: 12px;
+            color: #73818a;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .dot {
+            display: flex;
+            align-items: center;
+        }
+
+        .blankdot {
+            /* border: 1px solid seagreen; */
+            border-radius: 50%;
+            margin-right: 3px;
+            width: 3px;
+            height: 3px;
+            background-color: #47555e;
+        }
+
+        .time {
+            display: flex;
+            align-items: center;
+        }
+
+        .time p {
+            font-family: Chirp Web Medium;
+            font-size: 12px;
+            color: #73818a;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .threedot {
+            display: flex;
+            justify-content: end;
+            width: 100%;
+        }
+
+        .dotimg {
+            display: flex;
+            justify-content: end;
+            /* width: 40px; */
+        }
+
+        .dotimg svg {
+            fill: #73818a;
+            width: 15px;
+        }
+
+        .postcantent p {
+            font-family: Chirp Web Medium;
+            font-size: 13px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .postmedia {
+            display: flex;
+            margin-top: 11px;
+        }
+
+        .imgfram img {
+            border-radius: 20px;
+            width: 100%;
         }
 
         .info {
@@ -382,7 +624,7 @@
             <div class="conmain">
 
                 <div class="logo meop ghove"><a href="#"><img src="rsc/image/X-Logo.png" alt="X"></a></div>
-                <div class="meop ghove"><a href="index.html" rel="noopener noreferrer">
+                <div class="meop ghove"><a href="/index.html" rel="noopener noreferrer">
                         <div class="mainmenu">
                             <div class="conicon "><svg xmlns="http://www.w3.org/2000/svg" height="20px"
                                     viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -519,7 +761,7 @@
                     </div>
                 </div>
                 <div class="maTwitte">
-                    <div class="post">
+                    <div class="postTwitte">
                         <div class="pfp">
                             <img src="https://i.redd.it/0gw1ax20unt91.jpg" alt="">
                         </div>
@@ -527,9 +769,169 @@
                             <div class="twiinput">
                                 <input type="text" name="twitte" id="twitte" placeholder="What is happeing?!">
                             </div>
+                            <div class="mediaOption">
+                                <div class="addmedia">
+
+                                    <div class="mediaIcon"><button class="mediaButton">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                                <path
+                                                    d="M448 80c8.8 0 16 7.2 16 16V415.8l-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10.1l-80 112L48 416.3l0-.3V96c0-8.8 7.2-16 16-16H448zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z" />
+                                            </svg></button>
+                                    </div>
+                                    <div class="mediaIcon"><button class="mediaButton">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                                viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                                <path
+                                                    d="M256 0H576c35.3 0 64 28.7 64 64V288c0 35.3-28.7 64-64 64H256c-35.3 0-64-28.7-64-64V64c0-35.3 28.7-64 64-64zM476 106.7C471.5 100 464 96 456 96s-15.5 4-20 10.7l-56 84L362.7 169c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6h80 48H552c8.9 0 17-4.9 21.2-12.7s3.7-17.3-1.2-24.6l-96-144zM336 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM64 128h96V384v32c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V384H512v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V192c0-35.3 28.7-64 64-64zm8 64c-8.8 0-16 7.2-16 16v16c0 8.8 7.2 16 16 16H88c8.8 0 16-7.2 16-16V208c0-8.8-7.2-16-16-16H72zm0 104c-8.8 0-16 7.2-16 16v16c0 8.8 7.2 16 16 16H88c8.8 0 16-7.2 16-16V312c0-8.8-7.2-16-16-16H72zm0 104c-8.8 0-16 7.2-16 16v16c0 8.8 7.2 16 16 16H88c8.8 0 16-7.2 16-16V416c0-8.8-7.2-16-16-16H72zm336 16v16c0 8.8 7.2 16 16 16h16c8.8 0 16-7.2 16-16V416c0-8.8-7.2-16-16-16H424c-8.8 0-16 7.2-16 16z" />
+                                            </svg></button>
+                                    </div>
+                                    <div class="mediaIcon"><button class="mediaButton">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                                viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                                <path
+                                                    d="M448 96c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320zM256 160c0 17.7-14.3 32-32 32l-96 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l96 0c17.7 0 32 14.3 32 32zm64 64c17.7 0 32 14.3 32 32s-14.3 32-32 32l-192 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l192 0zM192 352c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l32 0c17.7 0 32 14.3 32 32z" />
+                                            </svg></button>
+                                    </div>
+                                    <div class="mediaIcon"><button class="mediaButton">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                                <path
+                                                    d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+                                            </svg></button>
+                                    </div>
+                                    <div class="mediaIcon"><button class="mediaButton">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                                viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                                <path
+                                                    d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z" />
+                                            </svg></button>
+                                    </div>
+                                    <div class="mediaIcon"><button class="mediaButton">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                                viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                                <path
+                                                    d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+                                            </svg></button>
+                                    </div>
+                                </div>
+                                <div class="postbutton">
+                                    <div class="posButton">
+                                        <button class="post">
+                                            <div class="postext">
+                                                Post
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
+                </div>
+                <div class="postcontent">
+                    <div class="twitteposted">
+                        <div class="twittePFP">
+                            <img src="https://pbs.twimg.com/media/EeahNh5VAAAvXMM?format=png&name=large" alt="NA">
+                        </div>
+                        <div class="twitteContent">
+                            <div class="userDetail">
+
+                                <div class="userinfo">
+                                    <div class="username">
+                                        <div class="name">
+                                            <p>God_of_War</p>
+                                        </div>
+                                        <div class="bluetick"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                                <path
+                                                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                            </svg></div>
+                                    </div>
+                                    <div class="usertag">
+                                        <p>@GOW</p>
+                                    </div>
+                                    <div class="dot">
+                                        <div class="blankdot"></div>
+                                    </div>
+                                    <div class="time">
+                                        <p>20h</p>
+                                    </div>
+                                </div>
+
+                                <div class="threedot">
+                                    <div class="dotimg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                            viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                            <path
+                                                d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="postcantent">
+                                <p>God of War</p>
+                            </div>
+                            <div class="postmedia">
+                                <div class="imgfram">
+                                    <img src="https://pbs.twimg.com/media/F_oi0uSXcAAR-3p?format=jpg&name=small" alt="NA">
+                                </div>
+                            </div>
+                            <div class="postdetail"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="postcontent">
+                    <div class="twitteposted">
+                        <div class="twittePFP">
+                            <img src="https://www.j-14.com/wp-content/uploads/2014/03/harry-styles-twitter-icon-11.jpg?fit=497%2C500&quality=86&strip=all" alt="NA">
+                        </div>
+                        <div class="twitteContent">
+                            <div class="userDetail">
+
+                                <div class="userinfo">
+                                    <div class="username">
+                                        <div class="name">
+                                            <p>TG</p>
+                                        </div>
+                                        <div class="bluetick"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                                <path
+                                                    d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                            </svg></div>
+                                    </div>
+                                    <div class="usertag">
+                                        <p>@TypicalGamer</p>
+                                    </div>
+                                    <div class="dot">
+                                        <div class="blankdot"></div>
+                                    </div>
+                                    <div class="time">
+                                        <p>3h</p>
+                                    </div>
+                                </div>
+
+                                <div class="threedot">
+                                    <div class="dotimg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                            viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                            <path
+                                                d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="postcantent">
+                                <p>God of War</p>
+                            </div>
+                            <div class="postmedia">
+                                <div class="imgfram">
+                                    <img src="https://pbs.twimg.com/media/F_NHNMZagAAJ1RO?format=jpg&name=small" alt="NA">
+                                </div>
+                            </div>
+                            <div class="postdetail"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="info">
